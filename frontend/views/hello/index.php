@@ -1,7 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gfc-c
- * Date: 08.05.2018
- * Time: 15:19
- */
+$this->title = 'Hello, world!!!';
+?>
+
+<h1>HELLO, WORLD</h1>
