@@ -21,10 +21,12 @@ class m180522_114431_create_tasks_table extends Migration
             'created_at' => $this->dateTime(),
             'updated_at' => $this->dateTime(),
             'file' => $this->string(100),
+            'project_id' =>$this->integer()
 
         ]);
 
         $this->addForeignKey('fk_tasks_user','tasks', 'user_id', 'user', 'id');
+        $this->addForeignKey('fk_tasks_project','tasks', 'project_id', 'project', 'id');
     }
 
     /**
@@ -33,6 +35,5 @@ class m180522_114431_create_tasks_table extends Migration
     public function safeDown()
     {
         $this->dropTable('tasks');
-        $this->dropForeignKey('fk_tasks_user', 'tasks');
     }
 }
