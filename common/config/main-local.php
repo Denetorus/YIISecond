@@ -1,5 +1,7 @@
 <?php
 require 'db.php';
+require 'Telegram.php';
+
 return [
     'components' => [
         'db' => $db,
@@ -11,5 +13,7 @@ return [
             // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
+        'bot' => $telegram,
+
     ],
 ];
