@@ -8,10 +8,10 @@ use yii\data\ActiveDataProvider;
 use yii\rest\ActiveController;
 
 
-class TaskAPIController extends ActiveController
+class RestController extends ActiveController
 {
 
-   // public $modelClass = Tasks::class;
+    public $modelClass = Tasks::class;
 
     public function actionIndex(){
 
