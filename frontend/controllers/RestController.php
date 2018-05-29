@@ -40,4 +40,14 @@ class RestController extends ActiveController
 
     }
 
+    public function actionCreate(){
+        $model = new tasks();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return '{true}';
+        }
+        return '{false}';
+
+    }
+
 }
