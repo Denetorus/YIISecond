@@ -22,4 +22,22 @@ class RestController extends ActiveController
 
     }
 
+    public function actionView($id){
+
+        return new ActiveDataProvider([
+                'query' => Tasks::findOne($id)
+            ]
+        );
+
+    }
+
+    public function actionDelete($id){
+
+        return new ActiveDataProvider([
+                'query' => Tasks::deleteAll('id = '.$id)
+            ]
+        );
+
+    }
+
 }
