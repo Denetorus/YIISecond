@@ -41,7 +41,10 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-             //   'consoleGreatings' => 'consolegreatings/index'
+//                'GET rest/<id>' => 'rest/view',
+//                'POST rest/<id>' => 'rest/create',
+//                'PUT rest/<id>' => 'rest/update',
+//                'DELETE rest/<id>' => 'rest/delete',
             ],
         ],
 
