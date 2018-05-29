@@ -8,6 +8,7 @@ use backend\models\TasksSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use SonkoDmitry\Yii\TelegramBot\Component;
 
 /**
  * TasksController implements the CRUD actions for tasks model.
@@ -67,6 +68,9 @@ class TasksController extends Controller
         $model = new tasks();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+//            /** @var @Component $bot */
+//            $bot = \Yii::$app->bot;
+//            $bot->SendMessage('466476531',"New Task");
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
