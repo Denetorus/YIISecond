@@ -39,12 +39,13 @@ return [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
+            //'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-//                'GET rest/<id>' => 'rest/view',
-//                'POST rest/<id>' => 'rest/create',
-//                'PUT rest/<id>' => 'rest/update',
-//                'DELETE rest/<id>' => 'rest/delete',
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'rest'
+                ],
             ],
         ],
 

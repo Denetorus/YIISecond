@@ -42,21 +42,21 @@ class RestController extends ActiveController
         $model = new tasks();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return '{true}';
+            return $model;
         }
-        return '{false}';
+        return $model;
 
     }
 
     public function actionUpdate($id)
     {
 
-        $model = Tasks::findOne($id);
+        $model = $this->modelClass->findOne($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->update()) {
-            return '{true}';
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $model;
         }
-        return '{false}';
+        return $model;
 
     }
 
