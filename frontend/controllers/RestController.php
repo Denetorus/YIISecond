@@ -33,6 +33,10 @@ class RestController extends ActiveController
 
     public function actionDelete($id){
 
+        return Tasks::findModel($id)->delete();
+
+
+
         return new ActiveDataProvider([
                 'query' => Tasks::deleteAll('id = '.$id)
             ]
@@ -44,6 +48,18 @@ class RestController extends ActiveController
         $model = new tasks();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return '{true}';
+        }
+        return '{false}';
+
+    }
+
+    public function actionUpdate($id)
+    {
+
+        $model = Tasks::findModel($id);
+
+        if ($model->load(Yii::$app->request->post()) && $model->update()) {
             return '{true}';
         }
         return '{false}';
