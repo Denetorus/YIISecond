@@ -37,13 +37,13 @@ return [
             'errorAction' => 'site/error',
         ],
 
-  /*      'urlManager' => [
+        'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'consoleGreatings' => 'consolegreatings/index'
+             //   'consoleGreatings' => 'consolegreatings/index'
             ],
-        ],*/
+        ],
 
     ],
     'params' => $params,
